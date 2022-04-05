@@ -999,6 +999,16 @@ img {
                         font-size: 12px;
                     }
                 }
+                .avaibility-low {
+                    margin-bottom: 0;
+                    font-size: 12px;
+                    color: #6b6b6b;
+                    line-height: 1;
+                    i {
+                        color: #c1d320;
+                        font-size: 12px;
+                    }
+                }
             }
             .short_overview {
                 p {
@@ -1267,7 +1277,11 @@ img {
                 line-height: 1;
                 color: $bg-default;
                 font-size: 24px;
-                margin-bottom: 10px;
+                margin-bottom: 10px; 
+                .discount {
+                    text-decoration: line-through;
+                    text-decoration-color: red;
+                }   
             }
             a {
                 display: block;
@@ -1672,5 +1686,11 @@ img {
         }
     }
 }
+
+p.product-price.discount {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}   
+
 
 /* ##### The End ##### */
