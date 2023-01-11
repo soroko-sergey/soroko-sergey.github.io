@@ -1,8 +1,15 @@
 RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://yoursite.com/$1 [L,R]
+
+#the rules above will redirect the entire site into https without www unless the request come with https://www .      
+
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.html[\s?/] [NC]
+RewriteRule ^ /%1%2 [R=302,L,NE]
+
+#the rules above will remove any .HTML.
+
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.html
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+ # you can use the two lines if file without extension not work and you want to map them to .html files and if you want to go the same file .html without extension keep it as it is .  
