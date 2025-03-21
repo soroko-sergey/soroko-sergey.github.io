@@ -1376,11 +1376,11 @@ img {
   background-color: #f5f7fa;
   padding: 30px;
   color: #6b6b6b;
-  font-size: 14px; }
+  font-size: 16px; }
 .checkout_details_area form textarea.form-control {
   height: 210px; }
 .checkout_details_area form .custom-control label {
-  font-size: 14px;
+  font-size: 16px;
   color: #6b6b6b; }
 .checkout_details_area form .nice-select {
   border-radius: 0;
@@ -1389,7 +1389,7 @@ img {
   background-color: #f5f7fa;
   border: none;
   color: #6b6b6b;
-  font-size: 14px; }
+  font-size: 16px; }
   .checkout_details_area form .nice-select .list {
     width: 100%;
     border-radius: 0;
